@@ -1,0 +1,8 @@
+.tiles_header>li{
+    float: right;
+}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "> ";
+    padding: 0 5px;
+}
