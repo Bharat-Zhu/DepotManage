@@ -1,12 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<ul id="breadcrumb" class="breadcrumb">
+<ul class="breadcrumb">
     <li>
-        <a href="#">主页</a>
-    </li>
-    <li>
-        <a href="#">登录</a>
-    </li>
-    <li class="active">
-        一览
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="showHome">主页</a>
     </li>
 </ul>
