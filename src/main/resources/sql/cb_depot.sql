@@ -23,25 +23,7 @@ CREATE TABLE `cbd_user` (
 -- ----------------------------
 -- Records of cbd_user
 -- ----------------------------
-INSERT INTO `cbd_user` VALUES ('1', 'C00001', 'c00001', '张三', 'San_Zhang@sina.cn', '1993-01-01', '1', '18700001234', '0', '1', '2018-04-01 17:19:27', '1', '2018-04-01 17:19:27');
-
--- ----------------------------
--- Table structure for cm_authority_relation
--- ----------------------------
-DROP TABLE IF EXISTS `cm_authority_relation`;
-CREATE TABLE `cm_authority_relation` (
-  `authority_id` int(11) NOT NULL COMMENT '权限ID',
-  `user_id` int(11) NOT NULL COMMENT '用户ID',
-  PRIMARY KEY (`authority_id`,`user_id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `authority_id` FOREIGN KEY (`authority_id`) REFERENCES `mbd_authority` (`id`),
-  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `cbd_user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '用户和权限关联表';
-
--- ----------------------------
--- Records of cm_authority_relation
--- ----------------------------
-INSERT INTO `cm_authority_relation` VALUES ('1', '1');
+INSERT INTO `cbd_user` VALUES ('1', 'C00001', 'c00001', '张三', 'San_Zhang@sina.cn', '1993-01-01', '1', '18700001234', '0', '1', NOW(), '1', NOW());
 
 -- ----------------------------
 -- Table structure for mbd_authority
@@ -62,7 +44,26 @@ CREATE TABLE `mbd_authority` (
 -- ----------------------------
 -- Records of mbd_authority
 -- ----------------------------
-INSERT INTO `mbd_authority` VALUES ('1', '1', '管理员');
-INSERT INTO `mbd_authority` VALUES ('2', '2', '部门');
-INSERT INTO `mbd_authority` VALUES ('3', '3', '领导');
-INSERT INTO `mbd_authority` VALUES ('4', '4', '一般');
+INSERT INTO `mbd_authority` VALUES ('1', '1', '管理员', '0', '1', NOW(), '1', NOW());
+INSERT INTO `mbd_authority` VALUES ('2', '2', '部门', '0', '1', NOW(), '1', NOW());
+INSERT INTO `mbd_authority` VALUES ('3', '3', '领导', '0', '1', NOW(), '1', NOW());
+INSERT INTO `mbd_authority` VALUES ('4', '4', '一般', '0', '1', NOW(), '1', NOW());
+
+
+-- ----------------------------
+-- Table structure for cm_authority_relation
+-- ----------------------------
+DROP TABLE IF EXISTS `cm_authority_relation`;
+CREATE TABLE `cm_authority_relation` (
+  `authority_id` int(11) NOT NULL COMMENT '权限ID',
+  `user_id` int(11) NOT NULL COMMENT '用户ID',
+  PRIMARY KEY (`authority_id`,`user_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `authority_id` FOREIGN KEY (`authority_id`) REFERENCES `mbd_authority` (`id`),
+  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `cbd_user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '用户和权限关联表';
+
+-- ----------------------------
+-- Records of cm_authority_relation
+-- ----------------------------
+INSERT INTO `cm_authority_relation` VALUES ('1', '1');
