@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>登录</title>
@@ -12,7 +13,7 @@
         <div class="logo png"></div>
         <div class="input">
             <div class="log">
-                <form class="form-horizontal" action="loginCheck" method="post" style="padding-left: 40px;">
+                <form:form action="loginCheck" method="post" cssClass="form-horizontal" cssStyle="padding-left: 40px;">
                     <div class="form-group">
                         <label class="col-sm-4 control-label" style="padding-right: 0;">帐号</label>
                         <div class="col-sm-8">
@@ -33,7 +34,7 @@
                         </div>
                     </div>
                     <input type="hidden" name="access_token" value="${sessionScope.accessToken}">
-                </form>
+                </form:form>
             </div>
         </div>
     </div>
