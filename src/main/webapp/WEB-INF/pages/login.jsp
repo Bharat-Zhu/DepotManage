@@ -13,19 +13,19 @@
         <div class="logo png"></div>
         <div class="input">
             <div class="log">
-                <form:form action="loginCheck" method="post" cssClass="form-horizontal" cssStyle="padding-left: 40px;">
+                <form action="loginCheck" method="post" class="form-horizontal" style="padding-left: 40px;">
                     <div class="form-group">
                         <label class="col-sm-4 control-label" style="padding-right: 0;">帐号</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="userNumber"
-                                   placeholder="请输入您的帐号">
+                            <input type="text" class="form-control" name="login_account"
+                                   placeholder="请输入您的帐号" value="${requestScope.member.memberAccount}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-4 control-label"style="padding-right: 0;">密码</label>
+                        <label class="col-sm-4 control-label" style="padding-right: 0;">密码</label>
                         <div class="col-sm-8">
-                            <input type="password" class="form-control" name="userPwd"
-                                   placeholder="请输入您的密码">
+                            <input type="password" class="form-control" name="login_pwd"
+                                   placeholder="请输入您的密码" value="${requestScope.member.memberPwd}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <input type="hidden" name="access_token" value="${sessionScope.accessToken}">
-                </form:form>
+                </form>
             </div>
         </div>
     </div>

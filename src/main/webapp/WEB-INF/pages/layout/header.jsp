@@ -50,7 +50,7 @@
             <li class="divider">
             </li>
             <li>
-                <a href="#"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
+                <a href="logout"><i class="fa fa-sign-out fa-fw"></i> 退出</a>
             </li>
         </ul>
     </li>
