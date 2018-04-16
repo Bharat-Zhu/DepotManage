@@ -1,6 +1,6 @@
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css" />
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/ace.min.css" />
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/ace.min.css" id="main-ace-style" />
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/ace-skins.min.css" />
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/ace-rtl.min.css" />
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/common.css" />

@@ -5,6 +5,7 @@
     <title>登录</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8;">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
 </head>
 <body>
@@ -13,19 +14,17 @@
         <div class="logo png"></div>
         <div class="input">
             <div class="log">
-                <form action="loginCheck" method="post" class="form-horizontal" style="padding-left: 40px;">
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label" style="padding-right: 0;">帐号</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="login_account"
-                                   placeholder="请输入您的帐号" value="${requestScope.member.memberAccount}">
+                <form action="loginCheck" method="post" class="form-horizontal">
+                    <div class="form-group" style="margin: 0 0 15px 10px;">
+                        <div class="input-group">
+                            <span class="input-group-addon fa fa-user" style="font-size: 19px;color: #2e7db4;"></span>
+                            <input type="text" name="login_account" class="form-control" placeholder="请输入您的帐号...">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label" style="padding-right: 0;">密码</label>
-                        <div class="col-sm-8">
-                            <input type="password" class="form-control" name="login_pwd"
-                                   placeholder="请输入您的密码" value="${requestScope.member.memberPwd}">
+                    <div class="form-group" style="margin: 0 0 15px 10px;">
+                        <div class="input-group">
+                            <span class="input-group-addon fa fa-lock" style="font-size: 20px;color: #2e7db4;"></span>
+                            <input type="password" name="login_pwd" class="form-control" placeholder="请输入您的密码...">
                         </div>
                     </div>
                     <div class="form-group">
@@ -33,7 +32,7 @@
                             <input type="submit" class="btn btn-info btn-block" value="登   录">
                         </div>
                     </div>
-                    <input type="hidden" name="access_token" value="${sessionScope.accessToken}">
+                    <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
                 </form>
             </div>
         </div>

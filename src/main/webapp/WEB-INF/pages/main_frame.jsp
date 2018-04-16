@@ -24,12 +24,14 @@
             <tiles:insertAttribute name="breadcrumb"/>
         </div>
         <!-- 内容 -->
-        <div class="page-content">
-            <tiles:insertAttribute name="body"/>
+        <div class="page-content" style="padding:0; background-color: white;">
+            <iframe id="contentFrame" height="auto" scrolling="no" frameborder="0" style="margin:0;padding:0;width:100%;height:100%;">
+                <%--<tiles:insertAttribute name="body"/>--%>
+            </iframe>
         </div>
     </div>
     <!-- Footer -->
-    <div class="footer">
+    <div class="footer" style="padding-top: 40px;">
         <tiles:insertAttribute name="footer"/>
     </div>
     <!-- 回顶部 -->
